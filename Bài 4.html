@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let text = "";
+    let n = 0;
+    let a;
+    let b;
+    let flag = true
+    if (n === 0) {
+        a = n;
+        b = 0;
+        n += 1;
+    }
+    if (n === 1) {
+        b = n;
+        n += 1;
+    }
+    while (flag === true) {
+        n = a + b;
+        if (n%5 === 0) {
+            flag = false;
+            break;
+        }
+        a = b
+        b = n;
+    }
+    if (flag === false) {
+        document.write(n)
+    }
+</script>
+</body>
+</html>
